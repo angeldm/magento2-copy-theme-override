@@ -4,6 +4,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="override_command" xsi:type="object">Angeldm\CopyThemeOverride\Console\Command\OverrideCommand</item>
+                <item name="generate-theme" xsi:type="object">Angeldm\CopyThemeOverride\Console\Command\GenerateThemeCommand</item>
             </argument>
         </arguments>
     </type>

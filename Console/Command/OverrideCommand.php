@@ -52,7 +52,7 @@ class OverrideCommand extends Command
 
     protected function configure()
     {
-        $this->setName('dev:copy-theme-override')
+        $this->setName('dev:theme:override')
             ->setDescription('Copy file into current active theme for overriding')
             ->setDefinition([
                 new InputArgument(
