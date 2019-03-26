@@ -1,5 +1,5 @@
 <?php
-namespace Jahvi\CopyThemeOverride\Console\Command;
+namespace Angeldm\CopyThemeOverride\Console\Command;
 
 use Magento\Framework\App\State;
 use Magento\Framework\View\DesignInterface;

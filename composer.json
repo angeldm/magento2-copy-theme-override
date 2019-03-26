@@ -32,7 +32,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Jahvi\\CopyThemeOverride\\": ""
+            "Angeldm\\CopyThemeOverride\\": ""
         }
     }
 }

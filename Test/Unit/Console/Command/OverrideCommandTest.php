@@ -1,5 +1,5 @@
 <?php
-namespace Jahvi\CopyThemeOverride\Test\Unit\Console\Command;
+namespace Angeldm\CopyThemeOverride\Test\Unit\Console\Command;
 
 use Magento\Framework\App\State;
 use Magento\Framework\View\DesignInterface;
@@ -9,7 +9,7 @@ use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\View\Design\Fallback\RulePool;
 use Magento\Framework\Filesystem\Directory\WriteFactory;
 use Magento\Framework\View\Element\Template\File\Resolver;
-use Jahvi\CopyThemeOverride\Console\Command\OverrideCommand;
+use Angeldm\CopyThemeOverride\Console\Command\OverrideCommand;
 use Magento\Framework\Component\ComponentRegistrarInterface;
 
 class OverrideCommandTest extends \PHPUnit_Framework_TestCase
@@ -160,7 +160,7 @@ class OverrideCommandTest extends \PHPUnit_Framework_TestCase
             ->willReturn(true);
 
         $fileExists = $this->getFunctionMock(
-            'Jahvi\\CopyThemeOverride\\Console\\Command',
+            'Angeldm\\CopyThemeOverride\\Console\\Command',
             'file_exists'
         );
         $fileExists->expects($this->once())->willReturn(false);
@@ -223,7 +223,7 @@ class OverrideCommandTest extends \PHPUnit_Framework_TestCase
             ->method('copyFile');
 
         $fileExists = $this->getFunctionMock(
-            'Jahvi\\CopyThemeOverride\\Console\\Command',
+            'Angeldm\\CopyThemeOverride\\Console\\Command',
             'file_exists'
         );
         $fileExists->expects($this->once())->willReturn(true);
