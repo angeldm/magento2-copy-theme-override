@@ -1,20 +1,20 @@
 <?php
 namespace Angeldm\CopyThemeOverride\Console\Command;
 
-use Magento\Framework\App\State;
-use Magento\Framework\View\DesignInterface;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputOption;
-use Magento\Framework\Module\Dir\ReverseResolver;
-use Symfony\Component\Console\Input\InputArgument;
 use Magento\Framework\App\Filesystem\DirectoryList;
-use Symfony\Component\Console\Input\InputInterface;
+use Magento\Framework\App\State;
 use Magento\Framework\Component\ComponentRegistrar;
-use Magento\Framework\View\Design\Fallback\RulePool;
-use Symfony\Component\Console\Output\OutputInterface;
-use Magento\Framework\Filesystem\Directory\WriteFactory;
-use Magento\Framework\View\Element\Template\File\Resolver;
 use Magento\Framework\Component\ComponentRegistrarInterface;
+use Magento\Framework\Filesystem\Directory\WriteFactory;
+use Magento\Framework\Filesystem\Io\File;
+use Magento\Framework\Module\Dir\ReverseResolver;
+use Magento\Framework\View\Design\Fallback\RulePool;
+use Magento\Framework\View\DesignInterface;
+use Magento\Framework\View\Element\Template\File\Resolver;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class OverrideCommand extends Command
 {
@@ -27,6 +27,7 @@ class OverrideCommand extends Command
     protected $rulePool;
     protected $directoryList;
     protected $writeFactory;
+    protected $fileSystem;
 
     public function __construct(
         ReverseResolver $dirResolver,
@@ -36,6 +37,7 @@ class OverrideCommand extends Command
         ComponentRegistrarInterface $componentRegistrar,
         RulePool $rulePool,
         DirectoryList $directoryList,
+        File $filesystemIo,
         WriteFactory $writeFactory
     ) {
         $this->moduleDirResolver = $dirResolver;
@@ -45,6 +47,7 @@ class OverrideCommand extends Command
         $this->rulePool = $rulePool;
         $this->directoryList = $directoryList;
         $this->writeFactory = $writeFactory;
+        $this->filesystemIo = $filesystemIo;
         $this->state = $state;
 
         parent::__construct();
