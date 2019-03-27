@@ -1,7 +1,6 @@
 <?php
 namespace Angeldm\CopyThemeOverride\Console\Command;
 
-use Angeldm\CopyThemeOverride\Helpers\CommandHelper;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem\Directory\WriteFactory;
 use Magento\Framework\Module\Dir\Reader;
