@@ -20,7 +20,6 @@ class GenerateThemeCommand extends Command
 
     protected $directoryList;
     protected $writeFactory;
-    protected $helper;
     protected $reader;
 
     public function __construct(
@@ -31,8 +30,6 @@ class GenerateThemeCommand extends Command
         $this->directoryList = $directoryList;
         $this->writeFactory = $writeFactory;
         $this->reader = $reader;
-        $this->helper = new CommandHelper($this);
-
         parent::__construct();
     }
 
